@@ -10,23 +10,26 @@
 <body>
 
     <div id="loading" class="loading-screen">
-        <div class="loading-icons">
-            <span class="icon guitar">🎸</span>
-            <span class="icon note note1">🎵</span>
-            <span class="icon note note2">🎶</span>
-            <span class="icon note note3">⚡</span>
-            <span class="icon note note4">🎵</span>
+        <div class="pulse-ring"></div>
+        <div id="loadingPhotoContainer" class="loading-photos"></div>
+        
+        <div class="loading-content">
+            <div class="loading-text" data-text="BEAT POP">BEAT POP</div>
         </div>
-        <div class="loading-text">ROCKING NOW...</div>
     </div>
+
+    <div id="particle-container"></div>
+
+    <div class="side-bg-text side-left">BEAT POP</div>
+    <div class="side-bg-text side-right">ROCK 'N' ROLL</div>
 
     <div class="hero">
         <div class="hero-content">
-            <h1 class="fade-in rock-title">BEAT POP</h1>
+            <h1 class="fade-in rock-title" data-text="BEAT POP">BEAT POP</h1>
             <h2 class="fade-in hero-sub">
                 <span class="ib">モノクロームな夜に、</span><span class="ib">最高の音を響かせろ。</span>
             </h2>
-            <p class="fade-in">
+            <p class="fade-in hero-desc">
                 <span class="ib">深谷駅徒歩7分。</span><span class="ib">大人のための隠れ家。</span>
             </p>
         </div>
@@ -65,7 +68,7 @@
 
     <section id="info" class="fade-in">
         <h2 class="section-title">Information</h2>
-        <div class="content-box">
+        <div class="content-box rock-card">
             <table class="info-table">
                 <tr>
                     <th>STORE NAME</th>
@@ -93,7 +96,7 @@
                         <span class="ib">ご予約・お問い合わせはお電話、</span><span class="ib">またはInstagramのDMにて承っております。</span>
                         <div class="btn-wrap">
                             <a href="tel:048-571-0193" class="btn">📞 048-571-0193</a>
-                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn">Instagram DM</a>
+                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn btn-outline">Instagram DM</a>
                         </div>
                     </td>
                 </tr>
@@ -101,8 +104,8 @@
                     <th>SNS</th>
                     <td>
                         <div class="btn-wrap">
-                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn">Instagram</a>
-                            <a href="#" target="_blank" class="btn">Facebook</a>
+                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn btn-outline">Instagram</a>
+                            <a href="#" target="_blank" class="btn btn-outline">Facebook</a>
                         </div>
                     </td>
                 </tr>
