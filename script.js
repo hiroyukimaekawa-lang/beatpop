@@ -1,9 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // スクロール時に要素を下からフワッと表示させる（フェードイン）処理
-    const faders = document.querySelectorAll('.fade-in');
 
+    // ==========================================
+    // 0. ローディング画面の制御
+    // ==========================================
+    const loadingScreen = document.getElementById('loading');
+    
+    // ページ読み込み完了時、または一定時間（1.5秒）経過後にフェードアウト
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingScreen.classList.add('loaded');
+        }, 1500); // 1500ミリ秒 = 1.5秒間ロックなアニメーションを見せる
+    });
+
+    // ==========================================
+    // 1. スクロールフェードイン アニメーション
+    // ==========================================
+    const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
-        threshold: 0.15, // 要素が15%見えたら発火
+        threshold: 0.15,
         rootMargin: "0px 0px -50px 0px"
     };
 
@@ -12,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!entry.isIntersecting) {
                 return;
             } else {
-                // クラスを追加してCSSのアニメーションを動かす
                 entry.target.classList.add('appear');
-                // 一度表示されたら監視を終了する
                 observer.unobserve(entry.target);
             }
         });
@@ -23,4 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
+
+    // ==========================================
+    // 2. ギャラリー カルーセルの無限ループ処理
+    // ==========================================
+    const track = document.getElementById('carouselTrack');
+    
+    if(track) {
+        const cloneContent = track.innerHTML;
+        track.innerHTML += cloneContent;
+    }
+
 });

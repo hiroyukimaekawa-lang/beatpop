@@ -4,53 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BEAT POP | 埼玉県深谷市 音響最高のカラオケ＆ライブバー</title>
-    <!-- CSSファイルの読み込み -->
     <link rel="stylesheet" href="style.css">
-    <!-- JavaScriptファイルの読み込み -->
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- トップヒーローセクション -->
-    <div class="hero">
-        <h1 class="fade-in">BEAT POP</h1>
-        <h2 class="fade-in">モノクロームな夜に、最高の音を響かせろ。</h2>
-        <p class="fade-in">深谷駅徒歩7分。大人のための隠れ家。</p>
+    <div id="loading" class="loading-screen">
+        <div class="loading-icons">
+            <span class="icon guitar">🎸</span>
+            <span class="icon note note1">🎵</span>
+            <span class="icon note note2">🎶</span>
+            <span class="icon note note3">⚡</span>
+            <span class="icon note note4">🎵</span>
+        </div>
+        <div class="loading-text">ROCKING NOW...</div>
     </div>
 
-    <!-- コンセプトセクション -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in rock-title">BEAT POP</h1>
+            <h2 class="fade-in hero-sub">
+                <span class="ib">モノクロームな夜に、</span><span class="ib">最高の音を響かせろ。</span>
+            </h2>
+            <p class="fade-in">
+                <span class="ib">深谷駅徒歩7分。</span><span class="ib">大人のための隠れ家。</span>
+            </p>
+        </div>
+    </div>
+
     <section id="about" class="fade-in">
         <h2 class="section-title">Concept</h2>
         <div class="concept-content">
-            <p class="concept-catch">基本はカラオケバー。<br>月に一度、熱狂のライブハウスへ。</p>
-            <p>
-            当店一番のこだわりは、何と言っても<span class="highlight-text">「音響最高」</span>の空間。<br>
-            心地よい重低音とクリアなサウンドが、あなたの歌声と演奏をワンランク上に引き上げます。<br>
-            普段はお酒とカラオケを楽しむ落ち着いたバーとして、そして月一回は生バンドのビートが鳴り響くライブハウスとして。<br>
-            音楽を愛するすべての人が集う場所、それがBEAT POPです。
+            <p class="concept-text">
+                <span class="ib">当店一番のこだわりは、</span><span class="ib">何と言っても</span><span class="ib highlight-text">「音響最高」</span><span class="ib">の空間。</span><br>
+                <span class="ib">心地よい重低音と</span><span class="ib">クリアなサウンドが、</span><span class="ib">あなたの歌声と演奏を</span><span class="ib">ワンランク上に引き上げます。</span><br>
+                <span class="ib">普段はお酒とカラオケを楽しむ</span><span class="ib">落ち着いたバーとして、</span><span class="ib">そして月一回は</span><span class="ib">生バンドのビートが鳴り響く</span><span class="ib">ライブハウスとして。</span><br>
+                <span class="ib">音楽を愛する</span><span class="ib">すべての人が集う場所、</span><span class="ib">それがBEAT POPです。</span>
             </p>
         </div>
         <div class="tags">
             <div class="tag">Live House</div>
             <div class="tag">Karaoke Bar</div>
-            <div class="tag">Best Sound System</div>
+            <div class="tag">Best Sound</div>
         </div>
     </section>
 
-    <!-- ギャラリーセクション -->
     <section id="gallery" class="fade-in">
         <h2 class="section-title">Gallery</h2>
-        <div class="gallery-grid">
-            <img src="img/BEAT POP2.webp" alt="BEAT POP 店内風景">
-            <img src="img/BEAT POP3.webp" alt="BEAT POP 店内風景">
-            <img src="img/BEAT POP4.webp" alt="BEAT POP 店内風景">
-            <img src="img/BEAT POP5.webp" alt="BEAT POP ライブ風景">
-            <img src="img/BEAT POP6.webp" alt="BEAT POP ライブ風景">
-            <img src="img/BEAT POP7.webp" alt="BEAT POP カラオケ風景">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <img src="img/BEAT POP2.webp" alt="BEAT POP 店内風景1">
+                <img src="img/BEAT POP3.webp" alt="BEAT POP 店内風景2">
+                <img src="img/BEAT POP4.webp" alt="BEAT POP 店内風景3">
+                <img src="img/BEAT POP5.webp" alt="BEAT POP ライブ風景1">
+                <img src="img/BEAT POP6.webp" alt="BEAT POP ライブ風景2">
+                <img src="img/BEAT POP7.webp" alt="BEAT POP カラオケ風景">
+            </div>
         </div>
     </section>
 
-    <!-- インフォメーションセクション -->
     <section id="info" class="fade-in">
         <h2 class="section-title">Information</h2>
         <div class="content-box">
@@ -61,23 +73,27 @@
                 </tr>
                 <tr>
                     <th>ADDRESS</th>
-                    <td>〒366-0826<br>埼玉県深谷市田所町７−４７<br>（JR高崎線 深谷駅より徒歩7分）</td>
+                    <td>
+                        <span class="ib">〒366-0826</span><br>
+                        <span class="ib">埼玉県深谷市田所町７−４７</span><br>
+                        <span class="ib">（JR高崎線 深谷駅より徒歩7分）</span>
+                    </td>
                 </tr>
                 <tr>
                     <th>OPEN HOURS</th>
-                    <td>18:00 〜 0:00</td>
+                    <td><span class="ib">18:00 〜 0:00</span></td>
                 </tr>
                 <tr>
                     <th>CLOSED</th>
-                    <td>月曜日・日曜日</td>
+                    <td><span class="ib">月曜日・日曜日</span></td>
                 </tr>
                 <tr>
                     <th>RESERVATION</th>
                     <td>
-                        ご予約・お問い合わせはお電話、またはInstagramのDMにて承っております。<br>
+                        <span class="ib">ご予約・お問い合わせはお電話、</span><span class="ib">またはInstagramのDMにて承っております。</span>
                         <div class="btn-wrap">
                             <a href="tel:048-571-0193" class="btn">📞 048-571-0193</a>
-                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn btn-sns">Instagram DM</a>
+                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn">Instagram DM</a>
                         </div>
                     </td>
                 </tr>
@@ -85,8 +101,8 @@
                     <th>SNS</th>
                     <td>
                         <div class="btn-wrap">
-                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn btn-sns">Instagram</a>
-                            <a href="#" target="_blank" class="btn btn-sns">Facebook</a>
+                            <a href="https://www.instagram.com/secretboys1965m.m/" target="_blank" class="btn">Instagram</a>
+                            <a href="#" target="_blank" class="btn">Facebook</a>
                         </div>
                     </td>
                 </tr>
